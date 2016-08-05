@@ -1,0 +1,15 @@
+{
+  "name": "eletron db",
+  "version": "1.0.1",
+  "description": "sorry no description",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js"
+  },
+  "author": "cipher geek studios",
+  "license": "ISC",
+  "companyName": "Cipher geek Studios",
+  "devDependencies": {
+      "electron-prebuilt": "^0.37.8"
+  }
+}
