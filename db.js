@@ -2,6 +2,7 @@ var fs = require('fs');
 var sql = require('sql.js');
 var bfr = fs.readFileSync('./tmp/test.db');
 var db = new sql.Database(bfr);
+window.$ = window.jQuery = require('jquery');
 var text
 var clear = "";
 
@@ -15,7 +16,9 @@ function shwtb() {
         var lenth = dts[0].values.length;
         text = "<ul class='list-group'>";
         for (i=0; i<lenth; i++){
-            text += "<li class='list-group-item'><input type='checkbox'/>" + dts[0].values[i] + "</li>";
+            var dbrow = dts[0].values[i];
+            var spltarr = String(dbrow).split(',');
+            text += "<li class='list-group-item'><input id='checklist' type='checkbox' value = '"+ spltarr[0] +"'/>" + spltarr[1] + "</li>";
         }
         text += "</ul>";
         document.getElementById("list").innerHTML = text;
@@ -49,4 +52,21 @@ function deltb() {
     fs.writeFileSync('./tmp/test.db', buffer);
     alert("All Cleared")
     document.getElementById("list").innerHTML = clear;
+}
+
+function delitem() {
+    var checkedValues = $('input[id="checklist"]:checked').map(function() {
+        return this.value;
+    }).get();
+    var checvaspl = String(checkedValues).split(',');
+    var conf = confirm("Are you sure wanted to delete "+checvaspl.length+" items from the tabel");
+    if (conf){
+        for (j=0; j<checvaspl.length; j++){
+            db.exec("DELETE FROM data WHERE id='"+ checvaspl[j] +"'");
+            var data = db.export();
+            var buffer = new Buffer(data);
+            fs.writeFileSync('./tmp/test.db', buffer);
+        }
+    shwtb();
+    }
 }
