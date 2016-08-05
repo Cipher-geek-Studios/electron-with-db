@@ -15,7 +15,9 @@ function shwtb() {
         var lenth = dts[0].values.length;
         text = "<ul class='list-group'>";
         for (i=0; i<lenth; i++){
-            text += "<li class='list-group-item'><input type='checkbox'/>" + dts[0].values[i] + "</li>";
+            var dbrow = dts[0].values[i];
+            var spltarr = String(dbrow).split(',');
+            text += "<li class='list-group-item'><input type='checkbox' value = '"+ spltarr[0] +"'/>" + spltarr[1] + "</li>";
         }
         text += "</ul>";
         document.getElementById("list").innerHTML = text;
