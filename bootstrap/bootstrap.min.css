@@ -5626,16 +5626,16 @@ a.label:hover,a.label:focus
 {
     display: inline-block;
     min-width: 10px;
-    padding: 3px 7px;
+    padding: 5px 10px;
     font-size: 12px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.5;
     color: #fff;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
     background-color: #777;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .badge:empty
@@ -7568,4 +7568,3 @@ button.close
         display: none!important;
     }
 }
-

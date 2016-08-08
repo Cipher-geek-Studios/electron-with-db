@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Excel Write</title>
+    <title>Electron to DB</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,21 +19,23 @@
     <![endif]-->
   </head>
   <body onload="showts()">
-      <h1>Write to Database using javascript</h1>
+      <h1>Electron to DB</h1>
       <div>
-          <input id="textss" type="text"  />
+          <input id="textss" type="text" placeholder="Send text to db" />
           <button id="insrow_db" onclick="insdb()">Insert</button>
-          <button id="shwtb_db" onclick="shwtb()">Show Table</button>
           <button id="deltb_db" onclick="deltb()">Clear Table</button>
           <button id="deltb_item" onclick="delitem()">Delete Selected</button>
       </div>
       <div id="list">
+    <div id="message" title="Hello">
 
+    </div>
       </div>
+      <footer>
+          coded with <hert>&hearts;</hert> by <coder href="http://ciphergeekstudios.workpress.com">Cipher geek Studios</coder>
+      </footer>
       <script src="db.js"></script>
       <script src="node_modules\sql.js\js\sql.js"></script>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap\bootstrap.min.js"></script>
   </body>
