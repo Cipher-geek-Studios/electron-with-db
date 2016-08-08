@@ -1,0 +1,57 @@
+body{
+
+}
+h1 {
+    padding-left: 43%;
+}
+.list-group-item {
+    font-size: 21px;
+}
+#list {
+    padding-top: 30px;
+}
+input[type="checkbox"] {
+    height: 16px;
+    width: 16px;
+}
+.badge {
+    font-size: 12px;
+}
+#textss {
+    margin-left: 20%;
+    border-radius: 7px;
+    border-color: #474747;
+    padding-left: 10px;
+    height: 35px;
+    width: 250px;
+}
+#textss:focus {
+    outline: none;
+}
+footer {
+    padding-left: 38%;
+    font-size: 20px;
+}
+footer hert {
+    color: red;
+    font-size: 30px;
+}
+button {
+    border-radius: 5px;
+    background-color: rgb(0, 194, 159);
+    border-color: transparent;
+    color: #ffffff;
+    height: 35px;
+    width: 130px;
+    outline: none;
+}
+.badge:hover {
+    background-color: red;
+}
+#deltb_item {
+    background-color: rgb(242, 27, 27);
+}
+
+coder {
+    color: rgba(12, 154, 215, 0.8);
+}
